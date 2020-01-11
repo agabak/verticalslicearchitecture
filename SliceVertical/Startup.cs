@@ -11,6 +11,7 @@ using Microsoft.Extensions.Hosting;
 using SliceVertical.Data;
 using SliceVertical.Infrastructure;
 using SliceVertical.Infrastructure.Tags;
+using SliceVertical.Pages.Instructors;
 
 namespace SliceVertical
 {
@@ -38,12 +39,12 @@ namespace SliceVertical
             services.AddAutoMapper(typeof(Startup));
 
             services.AddMediatR(typeof(Startup));
-            //services.AddScoped(
-            //    typeof(IPipelineBehavior<,>),
-            //    typeof(TransactionBehavior<,>));
-            //services.AddScoped(
-            //    typeof(IPipelineBehavior<,>),
-            //    typeof(LoggingBehavior<,>));
+            services.AddScoped(
+                typeof(IPipelineBehavior<,>),
+                typeof(TransactionBehavior<,>));
+            services.AddScoped(
+                typeof(IPipelineBehavior<,>),
+                typeof(LoggingBehavior<,>));
 
             services.AddHtmlTags(new TagConventions());
 
