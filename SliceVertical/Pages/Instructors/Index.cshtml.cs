@@ -134,10 +134,10 @@ namespace SliceVertical.Pages.Instructors
         {
             public MappingProfile()
             {
-                CreateMap<Model.Instructor, Model.Instructor>();
-                CreateMap<CourseAssignment, Model.CourseAssignment>();
-                CreateMap<Course, Model.Course>();
-                CreateMap<Enrollment, Model.Enrollment>();
+                CreateMap<Instructor, Instructor>();
+                CreateMap<CourseAssignment, CourseAssignment>();
+                CreateMap<Course, Course>();
+                CreateMap<Enrollment, Enrollment>();
             }
         }
 
