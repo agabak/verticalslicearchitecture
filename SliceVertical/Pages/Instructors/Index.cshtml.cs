@@ -17,7 +17,7 @@ using System.Threading.Tasks;
 namespace SliceVertical.Pages.Instructors
 {
     public class TransactionBehavior<TRequest, TResponse>
-         : IPipelineBehavior<TRequest, TResponse>
+          : IPipelineBehavior<TRequest, TResponse>
     {
         private readonly SchoolContext _dbContext;
 
@@ -134,10 +134,10 @@ namespace SliceVertical.Pages.Instructors
         {
             public MappingProfile()
             {
-                CreateMap<Instructor, Instructor>();
-                CreateMap<CourseAssignment, CourseAssignment>();
-                CreateMap<Course, Course>();
-                CreateMap<Enrollment, Enrollment>();
+                CreateMap<Instructor, Model.Instructor>();
+                CreateMap<CourseAssignment, Model.CourseAssignment>();
+                CreateMap<Course, Model.Course>();
+                CreateMap<Enrollment, Model.Enrollment>();
             }
         }
 
